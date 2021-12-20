@@ -1,0 +1,15 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        // 使用阿里的国内镜像替换掉速度慢的国外依赖仓库服务器
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        // 权限处理框架 - RxPermissions依赖仓库
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "PermissionsTest"
+include ':app'
